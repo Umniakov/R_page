@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image {
+  /* background-color: aqua; */
+  background-image: url("../pics/brooke.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top left;
+  transition: background-position 0.5s ease-in-out;
+}
+
+@media all and (max-width: 1024px) {
+  .bg-image {
+    background-position: top right;
+  }
+}
