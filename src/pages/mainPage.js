@@ -1,7 +1,6 @@
 import makeChild from "../functions/makeChild";
-
+import menuPage from "./menuPage.js";
 const main = document.querySelector("#content");
-console.log(main);
 export default function () {
   const homeMainContent = makeChild("div", "homeMainContent", [
     "m-auto",
@@ -11,9 +10,8 @@ export default function () {
     "max-[425px]:m-auto",
     "px-1",
     "flex",
-    "justify-center",
-    "align-center",
     "flex-col",
+    "items-center",
   ]);
   const headerInMainContent = makeChild(
     "h1",
@@ -39,8 +37,36 @@ export default function () {
     ["text-2xl", "text-center", "px-8"],
     `Thank you for choosing Savory Delights. We're excited to share our passion for delicious food with you.`
   );
-
+  const btnOrder = makeChild(
+    "button",
+    "btnOrder",
+    [
+      "text-white",
+      "bg-gradient-to-br",
+      "from-pink-500",
+      "to-orange-400",
+      "hover:bg-gradient-to-bl",
+      "focus:ring-4",
+      "focus:outline-none",
+      "focus:ring-pink-200",
+      "font-medium",
+      "rounded-lg",
+      "text-sm",
+      "px-5",
+      "py-2.5",
+      "text-center",
+      "block",
+      "w-fit",
+      "mt-5",
+    ],
+    "Order Now"
+  );
+  btnOrder.addEventListener("click", (e) => {
+    let oldChild = main.childNodes[1];
+    main.replaceChild(menuPage(), oldChild);
+  });
   homeMainContent.appendChild(headerInMainContent);
   homeMainContent.appendChild(welcomePar);
-  main.appendChild(homeMainContent);
+  homeMainContent.appendChild(btnOrder);
+  return homeMainContent;
 }

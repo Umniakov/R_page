@@ -8,6 +8,10 @@ module.exports = {
         "40vw": "40vw",
         "20vw": "20vw",
       },
+      gridTemplateColumns: {
+        "auto-fit": "repeat(auto-fit, minmax(380px, 1fr))",
+        "auto-fit-contact": "repeat(auto-fit, minmax(430px, 1fr))",
+      },
     },
   },
   plugins: [],

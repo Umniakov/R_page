@@ -27,6 +27,10 @@ module.exports = {
         include: path.resolve(__dirname, "src"),
         type: "asset/resource",
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
     ],
   },
   output: {

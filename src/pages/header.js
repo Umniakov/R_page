@@ -1,4 +1,4 @@
-import pepper from "../pics/pepper.png";
+import donut from "../pics/donut.png";
 import makeChild from "../functions/makeChild";
 const content = document.querySelector("#content");
 
@@ -9,6 +9,7 @@ const makeHeader = () => {
     "m-3",
     "sticky",
     "top-3",
+    "z-10",
   ]);
   const logoDiv = makeChild("div", "logoDiv", [
     "flex",
@@ -24,14 +25,14 @@ const makeHeader = () => {
     ["font-bold", "uppercase", "ml-0", "sm:ml-2", "text-xs", "sm:text-base"],
     "Savory Delights"
   );
-  logoImg.src = pepper;
+  logoImg.src = donut;
   const buttonDiv = makeChild("div", "btnDiv", [
     "flex",
     "justify-center",
     "grow",
     "lg:gap-10",
-    "sm:gap-3",
-    "gap-2",
+    "sm:gap-4",
+    "gap-4",
     "lg:text-2xl",
   ]);
   const buttons = () => {
