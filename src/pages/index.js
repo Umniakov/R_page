@@ -19,6 +19,8 @@ const navBtnListener = () => {
 
   function buildPage(e) {
     console.log(e.target.id);
+    const navbar = document.querySelector("#header");
+    navbar.classList.remove("bg-slate-100", "m-0", "top-0", "p-3");
     btns.forEach((e) => e.classList.remove("text-orange-600"));
     let oldChild = mainContent.childNodes[1];
     console.log(oldChild);
@@ -36,15 +38,16 @@ const navBtnListener = () => {
       mainContent.replaceChild(menuPage(), oldChild);
       btns[1].classList.add("text-orange-600");
       const gridRows = document.querySelectorAll(`div[data-cell^="grid-item"]`);
+      navbar.classList.add("bg-slate-100", "m-0", "top-0", "p-3");
       window.addEventListener("scroll", function () {
         gridRows.forEach((box, index) => {
           const boxTop = box.getBoundingClientRect().top;
           box.classList.add("transition-opacity");
           if (boxTop < 50) {
             box.classList.remove("opacity-100");
-            box.classList.add("opacity-10");
+            box.classList.add("opacity-50");
           } else {
-            box.classList.remove("opacity-10");
+            box.classList.remove("opacity-50");
             box.classList.add("opacity-100");
           }
         });
@@ -52,6 +55,7 @@ const navBtnListener = () => {
     } else if (e.target.id === "Contacts") {
       mainContent.replaceChild(contactPage(), oldChild);
       e.target.classList.add("text-orange-600");
+      navbar.classList.add("bg-slate-100", "m-0", "top-0", "p-3");
     }
   }
   return {
