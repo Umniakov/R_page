@@ -5,7 +5,7 @@
 #### 📝 Description
 Restaurant page project from The Odin Project Curriculum. 
 Using JavaScript alone to generate the entire contents of the website.
-Webpack bundelling practice 
+Webpack bundelling practice.
 
 #### 💡 Features
  * Responsive design
