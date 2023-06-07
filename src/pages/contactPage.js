@@ -12,7 +12,7 @@ const contactPage = () => {
     "gap-4",
     "2xl:ml-[40vw]",
     "lg:m-auto",
-    "m-5",
+    "m-4",
     "lg:mt-32",
     "md:p-5",
     "pt-5",

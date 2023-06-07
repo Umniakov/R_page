@@ -6,11 +6,13 @@ const makeHeader = () => {
   const divHeader = makeChild("header", "header", [
     "flex",
     "items-center",
-    "m-3",
+    "my-3",
+    "mx-4",
     "top-0",
     "sticky",
     "p-3",
     "z-10",
+    "rounded-md",
   ]);
   const logoDiv = makeChild("div", "logoDiv", [
     "flex",
