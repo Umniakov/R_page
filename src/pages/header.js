@@ -7,8 +7,9 @@ const makeHeader = () => {
     "flex",
     "items-center",
     "m-3",
+    "top-0",
     "sticky",
-    "top-3",
+    "p-3",
     "z-10",
   ]);
   const logoDiv = makeChild("div", "logoDiv", [
